@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <entry key="selectEmpByName">
+        SELECT E.EMP_ID,E.EMP_NAME,J.JOB_NAME
+        FROM EMPLOYEE E JOIN JOB J
+        ON E.JOB_CODE = J.JOB_CODE
+        WHERE E.EMP_NAME LIKE CONCAT(?,'%')
+    </entry>
+
+    <entry key="top">
+        SELECT *
+        FROM EMPLOYEE
+        ORDER BY SALARY DESC
+        LIMIT 1
+    </entry>
+
+    <entry key="no2">
+        select EMP_ID,EMP_NAME,PHONE,J.JOB_NAME
+        FROM EMPLOYEE E JOIN JOB J
+        ON E.JOB_CODE = J.JOB_CODE
+        WHERE E.EMP_NAME = "선동일"
+    </entry>
+
+</properties>
+
+
+
+
